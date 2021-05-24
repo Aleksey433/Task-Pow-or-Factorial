@@ -1,0 +1,37 @@
+package com.factorial;
+
+/*
+Что больше 2^200 или 100!
+ */
+
+import java.math.BigInteger;
+
+
+public class Solution {
+
+    public static void main(String[] args) {
+
+        BigInteger FactorialResult  = new BigInteger("1");
+        for( int i = 1 ; i <= 100 ; i++){
+            FactorialResult = FactorialResult.multiply(BigInteger.valueOf(i));
+        }
+
+        BigInteger b = new BigInteger("2");
+        BigInteger PowResult = b.pow(200);
+
+        int compareValue = FactorialResult.compareTo(PowResult);
+
+        String s=null;
+
+        if(compareValue==1)
+            s = "100! больше чем 2^200";
+        else if(compareValue== -1)
+            s = "100! меньше чем 2^200";
+        else if(compareValue == 0)
+            s = "100! равно 2^200";
+
+
+        System.out.println( FactorialResult);
+        System.out.println(PowResult);
+        System.out.println(s);
+
