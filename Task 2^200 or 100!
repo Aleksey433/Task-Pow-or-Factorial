@@ -34,4 +34,8 @@ public class Solution {
         System.out.println( FactorialResult);
         System.out.println(PowResult);
         System.out.println(s);
+        
+    }
+
+}
 
